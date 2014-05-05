@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DF30DB119176A9600C05074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB019176A9600C05074 /* Foundation.framework */; };
+		7DF30DB319176A9600C05074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB219176A9600C05074 /* CoreGraphics.framework */; };
+		7DF30DB519176A9600C05074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB419176A9600C05074 /* UIKit.framework */; };
+		7DF30DBB19176A9600C05074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DB919176A9600C05074 /* InfoPlist.strings */; };
+		7DF30DBD19176A9600C05074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DBC19176A9600C05074 /* main.m */; };
+		7DF30DC119176A9600C05074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC019176A9600C05074 /* AppDelegate.m */; };
+		7DF30DC419176A9600C05074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DC219176A9600C05074 /* Main.storyboard */; };
+		7DF30DC719176A9600C05074 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC619176A9600C05074 /* FirstViewController.m */; };
+		7DF30DCA19176A9600C05074 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC919176A9600C05074 /* SecondViewController.m */; };
+		7DF30DCC19176A9600C05074 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DCB19176A9600C05074 /* Images.xcassets */; };
+		7DF30DD319176A9700C05074 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DD219176A9600C05074 /* XCTest.framework */; };
+		7DF30DD419176A9700C05074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB019176A9600C05074 /* Foundation.framework */; };
+		7DF30DD519176A9700C05074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB419176A9600C05074 /* UIKit.framework */; };
+		7DF30DDD19176A9700C05074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DDB19176A9700C05074 /* InfoPlist.strings */; };
+		7DF30DDF19176A9700C05074 /* Alarm_modTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DDE19176A9700C05074 /* Alarm_modTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DF30DD619176A9700C05074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DF30DA519176A9600C05074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DF30DAC19176A9600C05074;
+			remoteInfo = "Alarm mod";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7DF30DAD19176A9600C05074 /* Alarm mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alarm mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF30DB019176A9600C05074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DF30DB219176A9600C05074 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7DF30DB419176A9600C05074 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7DF30DB819176A9600C05074 /* Alarm mod-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Alarm mod-Info.plist"; sourceTree = "<group>"; };
+		7DF30DBA19176A9600C05074 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DF30DBC19176A9600C05074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DF30DBE19176A9600C05074 /* Alarm mod-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Alarm mod-Prefix.pch"; sourceTree = "<group>"; };
+		7DF30DBF19176A9600C05074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7DF30DC019176A9600C05074 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DF30DC319176A9600C05074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DF30DC519176A9600C05074 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		7DF30DC619176A9600C05074 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7DF30DC819176A9600C05074 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7DF30DC919176A9600C05074 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7DF30DCB19176A9600C05074 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7DF30DD119176A9600C05074 /* Alarm modTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alarm modTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF30DD219176A9600C05074 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7DF30DDA19176A9700C05074 /* Alarm modTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Alarm modTests-Info.plist"; sourceTree = "<group>"; };
+		7DF30DDC19176A9700C05074 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DF30DDE19176A9700C05074 /* Alarm_modTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alarm_modTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DF30DAA19176A9600C05074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DB319176A9600C05074 /* CoreGraphics.framework in Frameworks */,
+				7DF30DB519176A9600C05074 /* UIKit.framework in Frameworks */,
+				7DF30DB119176A9600C05074 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF30DCE19176A9600C05074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DD319176A9700C05074 /* XCTest.framework in Frameworks */,
+				7DF30DD519176A9700C05074 /* UIKit.framework in Frameworks */,
+				7DF30DD419176A9700C05074 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DF30DA419176A9600C05074 = {
+			isa = PBXGroup;
+			children = (
+				7DF30DB619176A9600C05074 /* Alarm mod */,
+				7DF30DD819176A9700C05074 /* Alarm modTests */,
+				7DF30DAF19176A9600C05074 /* Frameworks */,
+				7DF30DAE19176A9600C05074 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DF30DAE19176A9600C05074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DAD19176A9600C05074 /* Alarm mod.app */,
+				7DF30DD119176A9600C05074 /* Alarm modTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DF30DAF19176A9600C05074 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DB019176A9600C05074 /* Foundation.framework */,
+				7DF30DB219176A9600C05074 /* CoreGraphics.framework */,
+				7DF30DB419176A9600C05074 /* UIKit.framework */,
+				7DF30DD219176A9600C05074 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DF30DB619176A9600C05074 /* Alarm mod */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DBF19176A9600C05074 /* AppDelegate.h */,
+				7DF30DC019176A9600C05074 /* AppDelegate.m */,
+				7DF30DC219176A9600C05074 /* Main.storyboard */,
+				7DF30DC519176A9600C05074 /* FirstViewController.h */,
+				7DF30DC619176A9600C05074 /* FirstViewController.m */,
+				7DF30DC819176A9600C05074 /* SecondViewController.h */,
+				7DF30DC919176A9600C05074 /* SecondViewController.m */,
+				7DF30DCB19176A9600C05074 /* Images.xcassets */,
+				7DF30DB719176A9600C05074 /* Supporting Files */,
+			);
+			path = "Alarm mod";
+			sourceTree = "<group>";
+		};
+		7DF30DB719176A9600C05074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DB819176A9600C05074 /* Alarm mod-Info.plist */,
+				7DF30DB919176A9600C05074 /* InfoPlist.strings */,
+				7DF30DBC19176A9600C05074 /* main.m */,
+				7DF30DBE19176A9600C05074 /* Alarm mod-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DF30DD819176A9700C05074 /* Alarm modTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DDE19176A9700C05074 /* Alarm_modTests.m */,
+				7DF30DD919176A9700C05074 /* Supporting Files */,
+			);
+			path = "Alarm modTests";
+			sourceTree = "<group>";
+		};
+		7DF30DD919176A9700C05074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DF30DDA19176A9700C05074 /* Alarm modTests-Info.plist */,
+				7DF30DDB19176A9700C05074 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DF30DAC19176A9600C05074 /* Alarm mod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF30DE219176A9700C05074 /* Build configuration list for PBXNativeTarget "Alarm mod" */;
+			buildPhases = (
+				7DF30DA919176A9600C05074 /* Sources */,
+				7DF30DAA19176A9600C05074 /* Frameworks */,
+				7DF30DAB19176A9600C05074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alarm mod";
+			productName = "Alarm mod";
+			productReference = 7DF30DAD19176A9600C05074 /* Alarm mod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DF30DD019176A9600C05074 /* Alarm modTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DF30DE519176A9700C05074 /* Build configuration list for PBXNativeTarget "Alarm modTests" */;
+			buildPhases = (
+				7DF30DCD19176A9600C05074 /* Sources */,
+				7DF30DCE19176A9600C05074 /* Frameworks */,
+				7DF30DCF19176A9600C05074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DF30DD719176A9700C05074 /* PBXTargetDependency */,
+			);
+			name = "Alarm modTests";
+			productName = "Alarm modTests";
+			productReference = 7DF30DD119176A9600C05074 /* Alarm modTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DF30DA519176A9600C05074 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jamie Walker";
+				TargetAttributes = {
+					7DF30DD019176A9600C05074 = {
+						TestTargetID = 7DF30DAC19176A9600C05074;
+					};
+				};
+			};
+			buildConfigurationList = 7DF30DA819176A9600C05074 /* Build configuration list for PBXProject "Alarm mod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DF30DA419176A9600C05074;
+			productRefGroup = 7DF30DAE19176A9600C05074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DF30DAC19176A9600C05074 /* Alarm mod */,
+				7DF30DD019176A9600C05074 /* Alarm modTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DF30DAB19176A9600C05074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DCC19176A9600C05074 /* Images.xcassets in Resources */,
+				7DF30DBB19176A9600C05074 /* InfoPlist.strings in Resources */,
+				7DF30DC419176A9600C05074 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF30DCF19176A9600C05074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DDD19176A9700C05074 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DF30DA919176A9600C05074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DCA19176A9600C05074 /* SecondViewController.m in Sources */,
+				7DF30DC119176A9600C05074 /* AppDelegate.m in Sources */,
+				7DF30DC719176A9600C05074 /* FirstViewController.m in Sources */,
+				7DF30DBD19176A9600C05074 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF30DCD19176A9600C05074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DF30DDF19176A9700C05074 /* Alarm_modTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DF30DD719176A9700C05074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DF30DAC19176A9600C05074 /* Alarm mod */;
+			targetProxy = 7DF30DD619176A9700C05074 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7DF30DB919176A9600C05074 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF30DBA19176A9600C05074 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DF30DC219176A9600C05074 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF30DC319176A9600C05074 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7DF30DDB19176A9700C05074 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DF30DDC19176A9700C05074 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DF30DE019176A9700C05074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DF30DE119176A9700C05074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DF30DE319176A9700C05074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alarm mod/Alarm mod-Prefix.pch";
+				INFOPLIST_FILE = "Alarm mod/Alarm mod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DF30DE419176A9700C05074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alarm mod/Alarm mod-Prefix.pch";
+				INFOPLIST_FILE = "Alarm mod/Alarm mod-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7DF30DE619176A9700C05074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Alarm mod.app/Alarm mod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alarm mod/Alarm mod-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Alarm modTests/Alarm modTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7DF30DE719176A9700C05074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Alarm mod.app/Alarm mod";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Alarm mod/Alarm mod-Prefix.pch";
+				INFOPLIST_FILE = "Alarm modTests/Alarm modTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DF30DA819176A9600C05074 /* Build configuration list for PBXProject "Alarm mod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF30DE019176A9700C05074 /* Debug */,
+				7DF30DE119176A9700C05074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DF30DE219176A9700C05074 /* Build configuration list for PBXNativeTarget "Alarm mod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF30DE319176A9700C05074 /* Debug */,
+				7DF30DE419176A9700C05074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7DF30DE519176A9700C05074 /* Build configuration list for PBXNativeTarget "Alarm modTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DF30DE619176A9700C05074 /* Debug */,
+				7DF30DE719176A9700C05074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DF30DA519176A9600C05074 /* Project object */;
+}
