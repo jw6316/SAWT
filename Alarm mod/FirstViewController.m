@@ -26,4 +26,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(IBAction)twitterino{
+    account = [[ACAccountStore alloc] init];
+    accountType = [account accountTypeWithAccountTypeIdentifier:
+                                  ACAccountTypeIdentifierTwitter];
+    [account requestAccessToAccountsWithType:accountType
+                                          options:nil completion:^(BOOL granted, NSError *e) {
+                                              if (granted) {
+                                                  NSArray *accounts = [account
+                                                                       accountsWithAccountType:accountType];
+                                                  accountType = [accounts lastObject];
+                                              }
+                                              else
+                                              {
+                                                  // Handle Failure
+                                              }
+                                          }];
+
+}
+
 @end

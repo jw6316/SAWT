@@ -11,6 +11,15 @@
 #import <AudioToolbox/AudioServices.h>
 #import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVCaptureDevice.h>
+int mins;
+int seconds;
+int hrs;
+NSDate *backgroundTime; // counts the time it was in the background
+NSDate *foregroundTIme; // counts "now" time and uses it to get the accurate time
+int allSeconds; // adds the hours and seconds and minutes into seconds only
+float difference; // the difference between backgroundTime and foregroundTime
+
+
 
 
 
@@ -19,9 +28,9 @@
 
 
 {
-    int mins;
-    int seconds;
-    int hrs;
+    
+    int startnumber;//TO MAKE THE START NOT WORK IF ITS ALREADY GOING
+    int stopnumber; // THIS IS TO STOP THE LIGHTS AND SOUND AND VIB
     
     NSURL *url;
 //    int crashing;
@@ -50,6 +59,11 @@
     
     
 }
+
+@property (nonatomic)IBOutlet UILabel *hourslabel;
+@property (nonatomic)IBOutlet UILabel *minuteslabel;
+@property (nonatomic)IBOutlet UILabel *secondslabel;
+
 
 
 

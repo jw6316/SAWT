@@ -14,6 +14,11 @@
 
 @implementation SecondViewController
 
+@synthesize minuteslabel;
+@synthesize secondslabel;
+@synthesize hourslabel;
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,6 +37,9 @@
     hourslabel.text=[NSString stringWithFormat:@"%d", hrs];
     minuteslabel.text=[NSString stringWithFormat:@"%d", mins];
     secondslabel.text=[NSString stringWithFormat:@"%d", seconds];
+    
+    startnumber = 0;
+    stopnumber = 0;
     
 
 //    hoursTF.delegate = self;
@@ -76,24 +84,15 @@
 
 
 -(IBAction)start{
-    
-    
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                             target:self
-                                           selector:@selector(countdown)
-                                           userInfo:nil
-                                            repeats:YES];
-    
-    
-    
-    
+    if (startnumber == 0) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                 target:self
+                                               selector:@selector(countdown)
+                                               userInfo:nil
+                                                repeats:YES];
+        startnumber = 1;
+    }
 }
-
-
- 
-
-
-
 
 -(void)countdown{
     
@@ -110,11 +109,8 @@
         [alert show];
         [audio play];
         
-        
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-        
-        
-        
+        while (stopnumber == 0) {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             AVCaptureSession *captureSession;
             [captureSession startRunning];
             NSError *error = nil;
@@ -122,6 +118,11 @@
             [captureDevice lockForConfiguration:&error];
             captureDevice.torchMode = AVCaptureTorchModeOn;
             [captureDevice unlockForConfiguration];
+
+        }
+        
+        
+        
         
         
         
@@ -172,7 +173,8 @@
 //    minsTF = 0;
     [timer invalidate];
     
-    
+    startnumber = 0;// make it 0 so that you can press start again
+    stopnumber = 0; // make it 0 so that you can play the wakeup sounds again
 }
 //-(IBAction)crash{
 //    crashing /= 0;
@@ -199,7 +201,13 @@
     
 }
 //
-//-(IBAction)off{
+-(IBAction)off{
+    
+    if (stopnumber == 0) {
+        stopnumber = 1;
+        [audio stop];
+
+    }
 //    NSError *offerror = nil;
 //    AVCaptureDevice *offcaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
 //    
@@ -209,8 +217,8 @@
 //    
 //    
 //    [captureSession stopRunning];
-//    
-//}
+    
+}
 
 
 

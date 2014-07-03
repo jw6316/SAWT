@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D0D39B3191899BC006BBBFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0D39B2191899BC006BBBFB /* AVFoundation.framework */; };
+		7DA5AB831954541600E10C65 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB821954541600E10C65 /* Accounts.framework */; };
+		7DA5AB851954544300E10C65 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB841954544300E10C65 /* Social.framework */; };
 		7DE2457D191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */; };
 		7DE2457F19188054005ABF02 /* 97744^ALARM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */; };
 		7DF30DB119176A9600C05074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB019176A9600C05074 /* Foundation.framework */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		7D0D39B2191899BC006BBBFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7DA5AB821954541600E10C65 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7DA5AB841954544300E10C65 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2014-05-06 at 10.55.10 AM.png"; sourceTree = "<group>"; };
 		7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "97744^ALARM.mp3"; path = "../97744^ALARM.mp3"; sourceTree = "<group>"; };
 		7DF30DAD19176A9600C05074 /* Alarm mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alarm mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA5AB851954544300E10C65 /* Social.framework in Frameworks */,
+				7DA5AB831954541600E10C65 /* Accounts.framework in Frameworks */,
 				7D0D39B3191899BC006BBBFB /* AVFoundation.framework in Frameworks */,
 				7DF30DB319176A9600C05074 /* CoreGraphics.framework in Frameworks */,
 				7DF30DB519176A9600C05074 /* UIKit.framework in Frameworks */,
@@ -111,6 +117,8 @@
 		7DF30DAF19176A9600C05074 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DA5AB841954544300E10C65 /* Social.framework */,
+				7DA5AB821954541600E10C65 /* Accounts.framework */,
 				7D0D39B2191899BC006BBBFB /* AVFoundation.framework */,
 				7DF30DB019176A9600C05074 /* Foundation.framework */,
 				7DF30DB219176A9600C05074 /* CoreGraphics.framework */,

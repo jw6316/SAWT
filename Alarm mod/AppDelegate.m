@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "SecondViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    
+    SecondViewController *secondViewController;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,11 +31,44 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    backgroundTime = [NSDate date]; //this is an "object" in the int and float category
+    allSeconds = seconds + mins * 60 + hrs * 3600;
+    NSUserDefaults *timeLapsed = [NSUserDefaults standardUserDefaults];
+    [timeLapsed setObject:backgroundTime forKey:@"time"];
+    [timeLapsed setInteger:allSeconds forKey:@"allTime"];
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    NSUserDefaults *timeLapsed = [NSUserDefaults standardUserDefaults];
+    backgroundTime = [timeLapsed objectForKey:@"time"];
+    foregroundTIme = [NSDate date];
+    difference = [foregroundTIme timeIntervalSinceDate:backgroundTime];
+    allSeconds = [timeLapsed integerForKey:@"allTime"];
+    
+    UIStoryboard *storyboardOfAwesomeness;
+    secondViewController = [storyboardOfAwesomeness instantiateViewControllerWithIdentifier:@"2VC"];
+    
+    if (allSeconds <= difference) {
+        mins = 0;
+        seconds = 0;
+        hrs = 0;
+        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",mins];
+        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hrs];
+        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",seconds];
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

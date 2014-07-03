@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Accounts/Accounts.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController{
+    
+    ACAccountStore *account;
+    ACAccountType *accountType;
+    
+    
+}
+
+-(IBAction)twitterino;
+
+
 
 @end
