@@ -67,8 +67,6 @@
         //hrs = (allSeconds - (int)difference) / 60 % 60;
         
         
-        
-        
     }
     
     
