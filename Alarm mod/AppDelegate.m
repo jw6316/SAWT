@@ -65,8 +65,6 @@
         seconds = (allSeconds - (int)difference) % 60;
         mins = (allSeconds - (int)difference) / 60 % 60;
         //hrs = (allSeconds - (int)difference) / 60 % 60;
-        
-        
     }
     
     
