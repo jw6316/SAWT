@@ -60,6 +60,13 @@
         secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hrs];
         secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",seconds];
         
+    }else{
+        
+        seconds = (allSeconds - (int)difference) % 60;
+        mins = (allSeconds - (int)difference) / 60 % 60;
+        //hrs = (allSeconds - (int)difference) / 60 % 60;
+        
+        
     }
     
     
