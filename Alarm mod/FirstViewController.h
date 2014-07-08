@@ -19,7 +19,7 @@
 
 -(IBAction)twitterino;
 
-//added some buttons (just for adding the commit/push :)  )
+//added some buttons (just for adding the commit/push)
 
 
 @end
