@@ -68,16 +68,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-mb-vN3">
-                                <rect key="frame" x="126" y="211" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2282633858866383" green="0.92897402075761559" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="31"/>
-                                <state key="normal" title="Set"/>
-                                <connections>
-                                    <action selector="settings" destination="HdK-5h-2gd" eventType="touchUpInside" id="XTn-XD-ehB"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-VD-kBO">
                                 <rect key="frame" x="-1" y="447" width="109" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -142,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frv-Sf-8uf">
-                                <rect key="frame" x="33" y="267" width="68" height="34"/>
+                                <rect key="frame" x="33" y="269" width="68" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2282633858866383" green="0.92897402075761559" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="31"/>
@@ -210,6 +200,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="90l-ra-bN9"/>
                     <connections>
+                        <outlet property="buttonoff" destination="CGa-i4-Q9h" id="JiQ-Gz-IkS"/>
                         <outlet property="hoursTF" destination="PpQ-2k-TFp" id="wMr-p9-jpj"/>
                         <outlet property="hourslabel" destination="0LC-VD-kBO" id="xZt-DZ-xiA"/>
                         <outlet property="hourstepper" destination="yGV-Aa-0v6" id="2gt-sL-nlW"/>

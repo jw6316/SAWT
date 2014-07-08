@@ -46,6 +46,9 @@ float difference; // the difference between backgroundTime and foregroundTime
     IBOutlet UILabel *minsTF;
     
     
+    IBOutlet UIButton *buttonoff;
+    
+    
     
     NSTimer *timer;
     
@@ -69,7 +72,7 @@ float difference; // the difference between backgroundTime and foregroundTime
 
 
 
--(IBAction)settings;
+//-(IBAction)settings;
 -(IBAction)resetion;
 -(IBAction)start;
 -(void)countdown;
@@ -78,6 +81,18 @@ float difference; // the difference between backgroundTime and foregroundTime
 -(IBAction)off;
 -(IBAction)hoursstepper;
 -(IBAction)minutesstepper;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

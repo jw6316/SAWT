@@ -64,8 +64,15 @@
         
         seconds = (allSeconds - (int)difference) % 60;
         mins = (allSeconds - (int)difference) / 60 % 60;
-        //hrs = (allSeconds - (int)difference) / 60 % 60;
+        hrs = (allSeconds - (int)difference) / 60 / 60;
+        
+        
+        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",mins];
+        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hrs];
+        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",seconds];
+        
     }
+    [UIApplication sharedApplication].applicationIconBadgeNumber = -1;
     
     
     
@@ -85,5 +92,9 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
 
 @end

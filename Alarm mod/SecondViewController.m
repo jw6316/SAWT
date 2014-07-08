@@ -54,21 +54,22 @@
 }
 
 
--(IBAction)settings{
-    
-    hrs = [hoursTF.text intValue];
-    mins = [minsTF.text intValue];
-    seconds = 0 ;
-    
-    
-    
-    hourslabel.text = hoursTF.text;
-    minuteslabel.text = minsTF.text;
-    secondslabel.text = @"0";
-    
-    
-    
-}
+//-(IBAction)settings{
+//    
+//    hrs = [hoursTF.text intValue];
+//    mins = [minsTF.text intValue];
+//    seconds = 0 ;
+//    
+//    
+//    
+//    hourslabel.text = hoursTF.text;
+//    minuteslabel.text = minsTF.text;
+//    secondslabel.text = @"0";
+//    
+//    
+//    
+//}
+// // unused now because its in the "start" method
 
 
 
@@ -90,7 +91,69 @@
                                                selector:@selector(countdown)
                                                userInfo:nil
                                                 repeats:YES];
+        
+        //バックグラウンド通知
+        //https://sites.google.com/site/propicaudio/sample-code/notification-test
+        //http://crunchtimer.jp/blog/ios/ios-localnotification.html
+        //UILocalNotificationクラスのインスタンスを作成します。
+        UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+        if (localNotif == nil)
+            return;
+        
+        //通知を受け取る時刻を指定します。
+        localNotif.fireDate = [[NSDate date] dateByAddingTimeInterval:seconds + mins * 60 + hrs * 3600];
+        localNotif.timeZone = [NSTimeZone defaultTimeZone];
+        
+        //通知メッセージの本文を指定します。
+        localNotif.alertBody = [NSString stringWithFormat:@"The timer has gone off. If you do not wake up, bad things might happen to you. No seriously."];
+        
+        //通知メッセージアラートのボタンに表示される文字を指定します。
+        localNotif.alertAction = @"Open";
+        
+        //通知されたときの音を指定します。
+        localNotif.soundName = UILocalNotificationDefaultSoundName;
+        
+        
+        //通知されたときのアイコンバッジの右肩に表示する数字を指定します。
+        localNotif.applicationIconBadgeNumber = 1;
+        
+        //通知を受け取るときに送付される NSDictionary を作成します。
+        NSDictionary *infoDict = [NSDictionary dictionaryWithObject:@"It is time that you set"    forKey:@"EventKey"];
+        localNotif.userInfo = infoDict;
+        
+        //作成した通知イベント情報をアプリケーションに登録します。
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+        
         startnumber = 1;
+        
+        hrs = [hoursTF.text intValue];
+        mins = [minsTF.text intValue];
+        seconds = 0 ;
+        
+        
+        
+        hourslabel.text = hoursTF.text;
+        minuteslabel.text = minsTF.text;
+        secondslabel.text = @"0";
+        
+        if (seconds + mins * 60 + hrs * 3600<=0) {
+            hrs = 0;
+            mins = 0;
+            seconds =0;
+            minuteslabel.text = @"0";
+            secondslabel.text = @"0";
+            hourslabel.text = @"0";
+            [timer invalidate];
+            secondslabel.text = [NSString stringWithFormat:@"%d", seconds];
+            minuteslabel.text = [NSString stringWithFormat:@"%d", mins];
+            hourslabel.text = [NSString stringWithFormat:@"%d", hrs];
+            
+            
+            
+        }
+        
+        
+
     }
 }
 
@@ -118,6 +181,7 @@
             [captureDevice lockForConfiguration:&error];
             captureDevice.torchMode = AVCaptureTorchModeOn;
             [captureDevice unlockForConfiguration];
+            [buttonoff.hidden = NO];
 
         }
         
@@ -156,6 +220,7 @@
     
     
     
+    
 }
 
 
@@ -175,11 +240,17 @@
     
     startnumber = 0;// make it 0 so that you can press start again
     stopnumber = 0; // make it 0 so that you can play the wakeup sounds again
+    
+    for(UILocalNotification *localNotif in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        [[UIApplication sharedApplication] cancelLocalNotification:localNotif];
+    }
+
 }
 //-(IBAction)crash{
 //    crashing /= 0;
 //    
 //}
+
 
 
 - (IBAction)hourstepper:(UIStepper *)sender {
@@ -206,6 +277,7 @@
     if (stopnumber == 0) {
         stopnumber = 1;
         [audio stop];
+        buttonoff.hidden = YES;
 
     }
 //    NSError *offerror = nil;
@@ -226,6 +298,5 @@
 //    hourstepper = hoursTF.text;
 //    minutestepper = minsTF.text;
 //}
-
 
 @end
