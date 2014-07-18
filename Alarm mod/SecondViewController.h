@@ -82,12 +82,7 @@ float difference; // the difference between backgroundTime and foregroundTime
 -(IBAction)hoursstepper;
 -(IBAction)minutesstepper;
 
-
-
-
-
-
-
+-(IBAction)debugSeconds;
 
 
 
