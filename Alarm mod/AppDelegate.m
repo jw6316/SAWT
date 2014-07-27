@@ -32,7 +32,7 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     backgroundTime = [NSDate date]; //this is an "object" in the int and float category
-    allSeconds = seconds + mins * 60 + hrs * 3600;
+    allSeconds = secondsTwo + minutes * 60 + hours * 3600;
     NSUserDefaults *timeLapsed = [NSUserDefaults standardUserDefaults];
     [timeLapsed setObject:backgroundTime forKey:@"time"];
     [timeLapsed setInteger:allSeconds forKey:@"allTime"];
@@ -53,28 +53,33 @@
     secondViewController = [storyboardOfAwesomeness instantiateViewControllerWithIdentifier:@"2VC"];
     
     if (allSeconds <= difference) {
-        mins = 0;
-        seconds = 0;
-        hrs = 0;
-        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",mins];
-        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hrs];
-        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",seconds];
+        minutes = 0;
+        secondsTwo = 0;
+        hours = 0;
+        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",minutes];
+        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hours];
+        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",secondsTwo];
         
     }else{
         
-        seconds = (allSeconds - (int)difference) % 60;
-        mins = (allSeconds - (int)difference) / 60 % 60;
-        hrs = (allSeconds - (int)difference) / 60 / 60;
+        secondsTwo = (allSeconds - (int)difference) % 60;
+        minutes = (allSeconds - (int)difference) / 60 % 60;
+        hours = (allSeconds - (int)difference) / 60 / 60;
         
         
-        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",mins];
-        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hrs];
-        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",seconds];
+        secondViewController.minuteslabel.text = [NSString stringWithFormat:@"%d",minutes];
+        secondViewController.hourslabel.text = [NSString stringWithFormat:@"%d",hours];
+        secondViewController.secondslabel.text = [NSString stringWithFormat:@"%d",secondsTwo];
         
     }
     [UIApplication sharedApplication].applicationIconBadgeNumber = -1;
     
+//    [secondViewController v];
+    // 通知を作成する
+    NSNotification *n = [NSNotification notificationWithName:@"Tuchi" object:self];
     
+    // 通知実行！
+    [[NSNotificationCenter defaultCenter] postNotification:n];
     
     
     

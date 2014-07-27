@@ -29,25 +29,67 @@
     audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     [audio prepareToPlay];
     
+    alert = [[UIAlertView alloc] initWithTitle:@"XD"
+                                       message:@"WAKE UP!"
+                                      delegate:nil
+                             cancelButtonTitle:@"Just a little more......."
+                             otherButtonTitles:@"Okay, okay, IM GETTING UP NOW", nil];
+    
+    
+    
     
 	// Do any additional setup after loading the view, typically from a nib.
     hrs = 0;
     mins = 0;
     seconds = 0;
-    buttonoff.hidden = YES;
-
-    
-    hourslabel.text=[NSString stringWithFormat:@"%d", hrs];
-    minuteslabel.text=[NSString stringWithFormat:@"%d", mins];
-    secondslabel.text=[NSString stringWithFormat:@"%d", seconds];
+//------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------
+//----------------------REMEMBER TO EXPLAIN------------------------
+// I MADE IT SO THAT YOU CANT CHANGE THE NUMBER BY JUST CLICKING THE STEPPER, EVEN WHEN THE TIMER IS GOING. DID THAT
+// BY MAKING A CONVERION FROM THE STEPPER INT TO THE TIMER INT, OOONNNNLLYYY WHEN THE "STARTNUMBER" IS 0. 
+// DONT worry I made the new ints global too
     
     startnumber = 0;
     stopnumber = 0;
-    buttonoff.center = CGPointMake(-100, -100);
 
 //    hoursTF.delegate = self;
 //    minsTF.delegate = self;
     
+    // デフォルトの通知センターを取得する
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    // 通知センターに通知要求を登録する
+    // この例だと、通知センターに"Tuchi"という名前の通知がされた時に、
+    // hogeメソッドを呼び出すという通知要求の登録を行っている。
+    [nc addObserver:self selector:@selector(v) name:@"Tuchi" object:nil];
+    
+}
+-(void)alert
+{
+
+
+    [alert show];
+
+}
+
+- (void)v
+{
+    buttonoff.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
+    [self.view setNeedsDisplay];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self v];
+
+}
+
+
+-(void)aaa
+{
+    buttonoff.frame = CGRectMake(160, 346, buttonoff.frame.size.width, buttonoff.frame.size.height);
+    NSLog(@"yo wasup");
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,12 +130,28 @@
 
 
 -(IBAction)start{
+    
+
+    
     if (startnumber == 0) {
+        
+        startButton.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
+
+        
+        
+
+        
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                  target:self
                                                selector:@selector(countdown)
                                                userInfo:nil
                                                 repeats:YES];
+        
+        
+        
+
+        
+        
         
         //バックグラウンド通知
         //https://sites.google.com/site/propicaudio/sample-code/notification-test
@@ -132,13 +190,11 @@
         
         hrs = [hoursTF.text intValue];
         mins = [minsTF.text intValue];
-        seconds = 0 ;
+        seconds = 0;
         
         
         
-        hourslabel.text = hoursTF.text;
-        minuteslabel.text = minsTF.text;
-        secondslabel.text = @"0";
+
         
         if (seconds + mins * 60 + hrs * 3600<=0) {
             hrs = 0;
@@ -148,58 +204,85 @@
             secondslabel.text = @"0";
             hourslabel.text = @"0";
             [timer invalidate];
-            secondslabel.text = [NSString stringWithFormat:@"%d", seconds];
-            minuteslabel.text = [NSString stringWithFormat:@"%d", mins];
-            hourslabel.text = [NSString stringWithFormat:@"%d", hrs];
+//            secondslabel.text = [NSString stringWithFormat:@"%d", seconds];
+//            minuteslabel.text = [NSString stringWithFormat:@"%d", mins];
+//            hourslabel.text = [NSString stringWithFormat:@"%d", hrs];
             
-            
+
             
         }
         
-        
+        hours = hrs;
+        minutes = mins;
+        secondsTwo = seconds;
 
     }
 }
 
 -(void)countdown{
+
     
-    seconds -= 1;
+    
+    secondsTwo -= 1;
     
     
-    if ( seconds < 0){
-        mins -= 1;
-        seconds = 59;
+    
+    if ( secondsTwo < 0){
+        minutes -= 1;
+        secondsTwo = 59;
         
-        if (mins < 0) {
-            hrs -= 1;
-            mins = 59;
+        if (minutes < 0) {
+            hours -= 1;
+            minutes = 59;
         }
         
     }
     
     
-    if (hrs < 0){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"XD"
-                                                        message:@"WAKE UP!"
-                                                       delegate:nil
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"Okay, okay, IM GETTING UP NOW", nil];
-        [alert show];
-        [audio play];
-        [timer invalidate];
-        buttonoff.hidden = NO;
-//        buttonoff.center =CGPointMake(160, 364);
+    
+//    seconds -= 1;
+//
+//    
+//    
+//    if ( seconds < 0){
+//        mins -= 1;
+//        seconds = 59;
+//        
+//        if (mins < 0) {
+//            hrs -= 1;
+//            mins = 59;
+//        }
+//        
+//    }
+//    
+    
+    if (hours < 0){
+        NSLog(@"hello");//呼び出される
+
+        [self aaa];
+        [self alert];
+
+        
+        [audio play];//これは呼び出されている
+        [timer invalidate];//多分呼び出されている
+        
+        
+        
+
+        //buttonoff.frame = CGRectMake(160, 346, buttonoff.frame.size.width, buttonoff.frame.size.height);//よびだされない
+
+    
+        
         
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            buttonoff.hidden = NO;
 //        });
 //        buttonoff.hidden = NO;
         
-        [self performSelectorOnMainThread:@selector(showButton) withObject:nil waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(aaa) withObject:nil waitUntilDone:NO];
         
-        
+
         NSLog(@"%f",buttonoff.alpha);//erase this later
-        
         
         
         while (stopnumber == 0) {
@@ -211,9 +294,15 @@
             [captureDevice lockForConfiguration:&error];
             captureDevice.torchMode = AVCaptureTorchModeOn;
             [captureDevice unlockForConfiguration];
+
+        
             
 
         }
+
+        
+        
+        
         
         
         
@@ -232,12 +321,9 @@
     }
     
     
-    
-    secondslabel.text = [NSString stringWithFormat:@"%d", seconds];
-    minuteslabel.text = [NSString stringWithFormat:@"%d", mins];
-    hourslabel.text = [NSString stringWithFormat:@"%d", hrs];
-    
-    
+    secondslabel.text = [NSString stringWithFormat:@"%d", secondsTwo];
+    minuteslabel.text = [NSString stringWithFormat:@"%d", minutes];
+    hourslabel.text = [NSString stringWithFormat:@"%d", hours];
     
     
 }
@@ -252,9 +338,12 @@
     minuteslabel.text = @"0";
     secondslabel.text = @"0";
     hourslabel.text = @"0";
-//    hoursTF = 0;
+//    hoursTF = 0;x
 //    minsTF = 0;
     [timer invalidate];
+    [self v];
+    startButton.frame = CGRectMake(121, 241, buttonoff.frame.size.width, buttonoff.frame.size.height);
+
     
     startnumber = 0;// make it 0 so that you can press start again
     stopnumber = 0; // make it 0 so that you can play the wakeup sounds again
@@ -274,14 +363,12 @@
 - (IBAction)hourstepper:(UIStepper *)sender {
     
     double value = [sender value];
-    
+
     [hoursTF setText:[NSString stringWithFormat:@"%d", (int)value]];
 }
 - (IBAction)minutesstepper{
-    
     mins = minutestepper.value;
     minsTF.text=[NSString stringWithFormat:@"%d",mins];
-
 }
 - (IBAction)hoursstepper{
     
@@ -289,13 +376,15 @@
     hoursTF.text=[NSString stringWithFormat:@"%d",hrs];
     
 }
-//
+
 -(IBAction)off{
     
     if (stopnumber == 0) {
         stopnumber = 1;
         [audio stop];
-        buttonoff.hidden = YES;
+        [self v];
+
+//        buttonoff.hidden = YES;
 //        buttonoff.center = CGPointMake(-100, -100);
     }
 //    NSError *offerror = nil;
@@ -319,8 +408,8 @@
 
 -(IBAction)debugSeconds{
     
-    seconds = seconds + 5;
-    secondslabel.text = [NSString stringWithFormat:(@"%d"), seconds];
+    secondsTwo = secondsTwo + 5;
+    secondslabel.text = [NSString stringWithFormat:(@"%d"), secondsTwo];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(countdown)

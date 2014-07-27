@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Accounts/Accounts.h>
 
-@interface FirstViewController : UIViewController{
+@interface FirstViewController : UIViewController <UITextFieldDelegate>{
     
     ACAccountStore *account;
     ACAccountType *accountType;
+    IBOutlet UITextField *textField;
+    IBOutlet UITextField *textField2;
+
     
     
 }

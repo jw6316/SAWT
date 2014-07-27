@@ -14,6 +14,9 @@
 int mins;
 int seconds;
 int hrs;
+int minutes;
+int secondsTwo;
+int hours;
 NSDate *backgroundTime; // counts the time it was in the background
 NSDate *foregroundTIme; // counts "now" time and uses it to get the accurate time
 int allSeconds; // adds the hours and seconds and minutes into seconds only
@@ -53,12 +56,14 @@ float difference; // the difference between backgroundTime and foregroundTime
     NSTimer *timer;
     
     AVAudioPlayer *audio;
+    UIAlertView *alert;
     
     IBOutlet UIStepper *hourstepper;
     IBOutlet UIStepper *minutestepper;
     
     
-    
+    IBOutlet UIImageView *bgImageView;
+    IBOutlet UIButton *startButton;
     
     
 }
@@ -83,7 +88,8 @@ float difference; // the difference between backgroundTime and foregroundTime
 -(IBAction)minutesstepper;
 
 -(IBAction)debugSeconds;
-
+-(void)v;
+-(void)alert;
 
 
 

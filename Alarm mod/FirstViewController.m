@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    textField.delegate = self;
+    textField2.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,6 +27,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //to close the keyboard thats in ur waaayyyyyyyyy ( IM NOT USING TEXT FIELDS SO......
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textFieldShouldReturn2:(UITextField *)textField
+{
+    //to close the keyboard thats in ur waaayyyyyyyyy ( IM NOT USING TEXT FIELDS SO......
+    [textField2 resignFirstResponder];
+    return YES;
+}
+
+
+
 
 
 -(IBAction)twitterino{
@@ -45,32 +64,34 @@
 //                                          }];
 
 }
--(void)Post
-{
-    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+//-(void)Post
+//{
+//    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+//    
+//    ACAccountType *facebookAccountType = [self.accountStore
+//                                          accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+//    
+//    // Specify App ID and permissions
+//    NSDictionary *options = @{
+//                              ACFacebookAppIdKey: @"my app id",
+//                              ACFacebookPermissionsKey: @[@"publish_stream", @"publish_actions"],
+//                              ACFacebookAudeinceKey: ACFacebookAudienceFriends
+//                              };
+//
+//    [accountStore requestAccessToAccountsWithType:facebookAccountType
+//                                          options:options completion:^(BOOL granted, NSError *e) {
+//                                              if (granted) {
+//                                                  NSArray *accounts = [self.accountStore
+//                                                                       accountsWithAccountType:facebookAccountType];
+//                                                  facebookAccount = [accounts lastObject];
+//                                              }
+//                                              else
+//                                              {
+//                                                  // Handle Failure
+//                                              }
+//                                          }];
     
-    ACAccountType *facebookAccountType = [self.accountStore
-                                          accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
-    
-    // Specify App ID and permissions
-    NSDictionary *options = @{
-                              ACFacebookAppIdKey: @"my app id",
-                              ACFacebookPermissionsKey: @[@"publish_stream", @"publish_actions"],
-                              ACFacebookAudeinceKey: ACFacebookAudienceFriends
-                              };
-    
-    [accountStore requestAccessToAccountsWithType:facebookAccountType
-                                          options:options completion:^(BOOL granted, NSError *e) {
-                                              if (granted) {
-                                                  NSArray *accounts = [self.accountStore
-                                                                       accountsWithAccountType:facebookAccountType];
-                                                  facebookAccount = [accounts lastObject];
-                                              }
-                                              else
-                                              {
-                                                  // Handle Failure
-                                              }
-                                          }];
-    
+
+
 
 @end
