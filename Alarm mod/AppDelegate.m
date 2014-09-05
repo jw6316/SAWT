@@ -81,8 +81,13 @@
     // 通知実行！
     [[NSNotificationCenter defaultCenter] postNotification:n];
     
-    
-    
+
+//    if (allSeconds != 0 ){
+//        
+//        buttonoff.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
+//        
+//    }
+//    
     
     
     

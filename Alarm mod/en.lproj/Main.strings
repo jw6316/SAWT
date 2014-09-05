@@ -1,0 +1,87 @@
+
+/* Class = "IBUILabel"; text = "YOU LIKE TO SLEEP?"; ObjectID = "02k-qp-tCx"; */
+"02k-qp-tCx.text" = "YOU LIKE TO SLEEP?";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "0LC-VD-kBO"; */
+"0LC-VD-kBO.text" = "0";
+
+/* Class = "IBUIViewController"; title = "First"; ObjectID = "6L6-OO-xWe"; */
+"6L6-OO-xWe.title" = "First";
+
+/* Class = "IBUILabel"; text = "e"; ObjectID = "7o6-Ge-BLL"; */
+"7o6-Ge-BLL.text" = "e";
+
+/* Class = "IBUILabel"; text = "i"; ObjectID = "8cl-FX-FHu"; */
+"8cl-FX-FHu.text" = "i";
+
+/* Class = "IBUITabBarItem"; title = "Second"; ObjectID = "90l-ra-bN9"; */
+"90l-ra-bN9.title" = "Second";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "Djd-jC-s3Z"; */
+"Djd-jC-s3Z.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "h"; ObjectID = "Fjn-Cr-pgo"; */
+"Fjn-Cr-pgo.text" = "h";
+
+/* Class = "IBUILabel"; text = "f"; ObjectID = "GLU-M5-bvW"; */
+"GLU-M5-bvW.text" = "f";
+
+/* Class = "IBUIViewController"; title = "Second"; ObjectID = "HdK-5h-2gd"; */
+"HdK-5h-2gd.title" = "Second";
+
+/* Class = "IBUILabel"; text = "Time until the alarm goes off:"; ObjectID = "KB9-AM-fkK"; */
+"KB9-AM-fkK.text" = "Time until the alarm goes off:";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "PpQ-2k-TFp"; */
+"PpQ-2k-TFp.text" = "0";
+
+/* Class = "IBUITabBarItem"; title = "First"; ObjectID = "TN0-le-Nkl"; */
+"TN0-le-Nkl.title" = "First";
+
+/* Class = "IBUILabel"; text = "hours"; ObjectID = "Tfh-6J-f99"; */
+"Tfh-6J-f99.text" = "hours";
+
+/* Class = "IBUILabel"; text = "hours"; ObjectID = "U25-3A-fSC"; */
+"U25-3A-fSC.text" = "hours";
+
+/* Class = "IBUILabel"; text = "seconds"; ObjectID = "VWp-YC-pF1"; */
+"VWp-YC-pF1.text" = "seconds";
+
+/* Class = "IBUILabel"; text = "d"; ObjectID = "Vw6-Bm-T7i"; */
+"Vw6-Bm-T7i.text" = "d";
+
+/* Class = "IBUILabel"; text = "j"; ObjectID = "Xgy-bF-SdV"; */
+"Xgy-bF-SdV.text" = "j";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "Yuu-Nf-MLI"; */
+"Yuu-Nf-MLI.text" = "0";
+
+/* Class = "IBUILabel"; text = "b"; ObjectID = "foE-4p-n1N"; */
+"foE-4p-n1N.text" = "b";
+
+/* Class = "IBUILabel"; text = "c"; ObjectID = "gPy-WQ-OBU"; */
+"gPy-WQ-OBU.text" = "c";
+
+/* Class = "IBUILabel"; text = "g"; ObjectID = "hfA-hE-vGs"; */
+"hfA-hE-vGs.text" = "g";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "hgR-pQ-le6"; */
+"hgR-pQ-le6.text" = "0";
+
+/* Class = "IBUILabel"; text = "a"; ObjectID = "i09-l9-Pss"; */
+"i09-l9-Pss.text" = "a";
+
+/* Class = "IBUILabel"; text = "HOW LONG WOULD"; ObjectID = "lu2-bV-PTe"; */
+"lu2-bV-PTe.text" = "HOW LONG WOULD";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "n6c-yX-zlf"; */
+"n6c-yX-zlf.text" = "0";
+
+/* Class = "IBUILabel"; text = "mins"; ObjectID = "nfa-UP-chL"; */
+"nfa-UP-chL.text" = "mins";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "qTo-UQ-6as"; */
+"qTo-UQ-6as.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "minutes"; ObjectID = "s1D-of-MIH"; */
+"s1D-of-MIH.text" = "minutes";

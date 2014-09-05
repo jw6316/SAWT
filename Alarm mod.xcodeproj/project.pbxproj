@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7D0D39B3191899BC006BBBFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0D39B2191899BC006BBBFB /* AVFoundation.framework */; };
+		7D3633F6199C7B6700635152 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC919176A9600C05074 /* SecondViewController.m */; };
+		7D3633F7199C7B9500635152 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC619176A9600C05074 /* FirstViewController.m */; };
+		7D3633F8199C7BA700635152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DBC19176A9600C05074 /* main.m */; };
+		7D3633F9199C7BB900635152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC019176A9600C05074 /* AppDelegate.m */; };
+		7D3633FA199C7C0900635152 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC919176A9600C05074 /* SecondViewController.m */; };
+		7D3633FF199C8C2A00635152 /* resetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3633FC199C8C2A00635152 /* resetButton.png */; };
+		7D363400199C8C2A00635152 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3633FD199C8C2A00635152 /* startButton.png */; };
+		7D363401199C8C2A00635152 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3633FE199C8C2A00635152 /* stopButton.png */; };
 		7DA5AB831954541600E10C65 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB821954541600E10C65 /* Accounts.framework */; };
 		7DA5AB851954544300E10C65 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB841954544300E10C65 /* Social.framework */; };
 		7DC174AB19825BF100E0D088 /* Screen Shot 2014-05-05 at 2.24.25 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC174AA19825BF100E0D088 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */; };
 		7DE2457D191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */; };
 		7DE2457F19188054005ABF02 /* 97744^ALARM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */; };
+		7DE6F1611999E34B0096865B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB841954544300E10C65 /* Social.framework */; };
 		7DF30DB119176A9600C05074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB019176A9600C05074 /* Foundation.framework */; };
 		7DF30DB319176A9600C05074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB219176A9600C05074 /* CoreGraphics.framework */; };
 		7DF30DB519176A9600C05074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB419176A9600C05074 /* UIKit.framework */; };
@@ -21,13 +30,11 @@
 		7DF30DC119176A9600C05074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC019176A9600C05074 /* AppDelegate.m */; };
 		7DF30DC419176A9600C05074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DC219176A9600C05074 /* Main.storyboard */; };
 		7DF30DC719176A9600C05074 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC619176A9600C05074 /* FirstViewController.m */; };
-		7DF30DCA19176A9600C05074 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DC919176A9600C05074 /* SecondViewController.m */; };
 		7DF30DCC19176A9600C05074 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DCB19176A9600C05074 /* Images.xcassets */; };
 		7DF30DD319176A9700C05074 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DD219176A9600C05074 /* XCTest.framework */; };
 		7DF30DD419176A9700C05074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB019176A9600C05074 /* Foundation.framework */; };
 		7DF30DD519176A9700C05074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF30DB419176A9600C05074 /* UIKit.framework */; };
 		7DF30DDD19176A9700C05074 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DF30DDB19176A9700C05074 /* InfoPlist.strings */; };
-		7DF30DDF19176A9700C05074 /* Alarm_modTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF30DDE19176A9700C05074 /* Alarm_modTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		7D0D39B2191899BC006BBBFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7D3633FC199C8C2A00635152 /* resetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resetButton.png; sourceTree = "<group>"; };
+		7D3633FD199C8C2A00635152 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		7D3633FE199C8C2A00635152 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
 		7DA5AB821954541600E10C65 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		7DA5AB841954544300E10C65 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7DC174AA19825BF100E0D088 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2014-05-05 at 2.24.25 PM.png"; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE6F1611999E34B0096865B /* Social.framework in Frameworks */,
 				7DF30DD319176A9700C05074 /* XCTest.framework in Frameworks */,
 				7DF30DD519176A9700C05074 /* UIKit.framework in Frameworks */,
 				7DF30DD419176A9700C05074 /* Foundation.framework in Frameworks */,
@@ -136,6 +147,9 @@
 				7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */,
 				7DC174AA19825BF100E0D088 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */,
 				7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */,
+				7D3633FC199C8C2A00635152 /* resetButton.png */,
+				7D3633FD199C8C2A00635152 /* startButton.png */,
+				7D3633FE199C8C2A00635152 /* stopButton.png */,
 				7DF30DBF19176A9600C05074 /* AppDelegate.h */,
 				7DF30DC019176A9600C05074 /* AppDelegate.m */,
 				7DF30DC219176A9600C05074 /* Main.storyboard */,
@@ -254,10 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3633FF199C8C2A00635152 /* resetButton.png in Resources */,
 				7DE2457F19188054005ABF02 /* 97744^ALARM.mp3 in Resources */,
 				7DF30DCC19176A9600C05074 /* Images.xcassets in Resources */,
 				7DF30DBB19176A9600C05074 /* InfoPlist.strings in Resources */,
+				7D363400199C8C2A00635152 /* startButton.png in Resources */,
 				7DF30DC419176A9600C05074 /* Main.storyboard in Resources */,
+				7D363401199C8C2A00635152 /* stopButton.png in Resources */,
 				7DE2457D191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png in Resources */,
 				7DC174AB19825BF100E0D088 /* Screen Shot 2014-05-05 at 2.24.25 PM.png in Resources */,
 			);
@@ -278,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF30DCA19176A9600C05074 /* SecondViewController.m in Sources */,
+				7D3633FA199C7C0900635152 /* SecondViewController.m in Sources */,
 				7DF30DC119176A9600C05074 /* AppDelegate.m in Sources */,
 				7DF30DC719176A9600C05074 /* FirstViewController.m in Sources */,
 				7DF30DBD19176A9600C05074 /* main.m in Sources */,
@@ -289,7 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF30DDF19176A9700C05074 /* Alarm_modTests.m in Sources */,
+				7D3633F9199C7BB900635152 /* AppDelegate.m in Sources */,
+				7D3633F8199C7BA700635152 /* main.m in Sources */,
+				7D3633F7199C7B9500635152 /* FirstViewController.m in Sources */,
+				7D3633F6199C7B6700635152 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
