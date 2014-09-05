@@ -64,7 +64,7 @@
 
 
 
-//Debugged almost nothing compared to how many bugs there still are.
+//I think this has been like, such a good session its not even funny. :D
 
 
 @end
