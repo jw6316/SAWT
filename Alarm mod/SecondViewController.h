@@ -100,6 +100,7 @@ float difference; // the difference between backgroundTime and foregroundTime
     
     NSString *hazukashiArray [10];
     
+    BOOL isStarted;
     
 }
 

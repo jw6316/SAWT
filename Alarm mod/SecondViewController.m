@@ -58,6 +58,10 @@
     
     b = 160;
     [super viewDidLoad];
+    
+    //===========
+    isStarted = NO;
+    //===========
 
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"97744^ALARM" ofType:@"mp3"];
@@ -94,18 +98,18 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
     // 通知センターに通知要求を登録する
-    // この例だと、通知センターに"Tuchi"という名前の通知がされた時に、
+    // この例だと、通知センターに"Tszuchi"という名前の通知がされた時に、
     // hogeメソッドを呼び出すという通知要求の登録を行っている。
-    [nc addObserver:self selector:@selector(hideButtonOff) name:@"Tuchi" object:nil];
+    [nc addObserver:self selector:@selector(hideButtonOff) name:@"Tsuchi" object:nil];
     
     
 
     
-    hazukashiArray [0] = @"I wiegh %d 00 kg.";
+    hazukashiArray [0] = @"I weigh %d00 kg.";
     hazukashiArray [1] = @"Im only %dcm tall";
-    hazukashiArray [2] = @"cccc %d";
-    hazukashiArray [3] = @"dddd %d";
-    hazukashiArray [4] = @"eeee %d";
+    hazukashiArray [2] = @"My foot length is %dcm";
+    hazukashiArray [3] = @"I already changed my diapers %d times today!";
+    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
     hazukashiArray [5] = @"ffff %d";
     hazukashiArray [6] = @"gggg %d";
     hazukashiArray [7] = @"hhhh %d";
@@ -119,7 +123,18 @@
     
 }
 
-
+-(void)stopTimerTwitter{
+    
+    if ( timer2 || [timer2 isValid])
+    {
+        [timer2 invalidate];
+        timer2 = nil;
+        afterTimerSeconds = 121;
+        
+        
+    }
+    
+}
 
 - (IBAction)btn:(id)sender{
     [self whenZero];
@@ -197,6 +212,7 @@
     {
         [timer invalidate];
         timer = nil;
+        
         
     
     }
@@ -320,7 +336,6 @@
 
 
 
-
 - (IBAction)twitterino{//change to void later
 //    labelForA.text = [NSString stringWithFormat:@"%d", a];
 //    labelForB.text = [NSString stringWithFormat:@"%d", b];
@@ -335,16 +350,19 @@
     
     int random_number = arc4random() %10;
     
+    NSLog(@"random_number == %d", random_number);
+    
     if (random_number == 0){
         a++;
         z = a;
     }else if (random_number == 1){
-        b--;
+        b -= b;
         z = b;
     }else if (random_number == 2){
-        c++;
+        c--;
         z = c;
     }else if (random_number == 3){
+        d = 2;
         d++;
         z = d;
     }else if (random_number == 4){
@@ -394,6 +412,8 @@
              }
          }];
     }
+    
+    afterTimerSeconds = 121;
 }
 
 
@@ -401,10 +421,24 @@
     afterTimerSeconds -= 1;
     if (afterTimerSeconds ==1) {
         [self twitterino];
+        [timer2 invalidate];
+        timer2 = nil;
+        afterTimerSeconds = 121;
     }
 }
 
 
+-(void)afterTimerTimerMethod{
+
+    if (timer2==nil){
+    
+timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1    // used for debug, fix to 1 time per sec later.
+                                          target:self
+                                        selector:@selector(allSecondsCountdown)
+                                        userInfo:nil
+                                         repeats:YES];
+    }
+}
 -(void)countdown{
     
     secondsTwo -= 1;
@@ -424,6 +458,13 @@
 
     
     if (hours == 0 && minutes == 0 && secondsTwo == 1){
+        
+        
+        [self afterTimerTimerMethod];
+        
+
+        
+        
         
 //        [self twitterino];
         
@@ -474,17 +515,20 @@
 }
 
 
-
--(void)UIAlertView:(UIAlertView*)alertView clickedBtuttonAtIndex:(NSInteger)buttonIndex {
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"alert-button");
     switch (buttonIndex) {
         case 0:
             [self stopTimerTwitter];
             break;
             
         default:
+            
             break;
     }
 }
+
 
 
 - (void)whenZero //combined the alert with the showOffButton
@@ -499,21 +543,18 @@
                           cancelButtonTitle:@"Getting up now! "
                           otherButtonTitles:@"Lemme sleep.....", nil];
     
-    [alert performSelectorOnMainThread:@selector(show)
-                            withObject:nil
-                         waitUntilDone:NO];
+//    [alert performSelectorOnMainThread:@selector(show)
+//                            withObject:nil
+//                         waitUntilDone:NO];
+    
+    [alert show];
+    
     // アラートビューを表示
     NSLog(@"im totally awesomely working");
     buttonoff.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
 
     
-    timer2 = [NSTimer scheduledTimerWithTimeInterval:0.05    // used for debug, fix to 1 time per sec later.
-                                             target:self
-                                           selector:@selector(allSecondsCountdown)
-                                           userInfo:nil
-                                            repeats:YES];
-
-
+    
 }
 
 
@@ -531,6 +572,7 @@
     if ( timer || [timer isValid])
     {
         [timer invalidate];
+        [timer2 invalidate];
         timer = nil;
         
         
@@ -597,17 +639,7 @@
     
 }
 
--(void)stopTimerTwitter{
-    
-    if ( timer2 || [timer2 isValid])
-    {
-        [timer2 invalidate];
-        timer2 = nil;
-        
-        
-    }
-    
-}
+
 
 
 @end
