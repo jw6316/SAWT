@@ -178,7 +178,7 @@ SecondViewController *secondViewController;
 -(IBAction)instructions{
     UIAlertView *alert = [[UIAlertView alloc]
              initWithTitle:@"Instructions"
-             message:@"Sign into twitter through system preferences. After adding the amount of time you wish to sleep, press start. This will wake you up, trying every way possible."
+             message:@"1). Sign into twitter through system preferences. 2). After adding the amount of time you wish to sleep, press start. 3). This will wake you up, trying every way possible (even using auto-sharing on twitter; don't worry we'll only post sort-of-embarrasing things)."
              delegate:self
              cancelButtonTitle:@"Got it."
              otherButtonTitles:nil];
@@ -189,6 +189,21 @@ SecondViewController *secondViewController;
     NSLog(@"this is working");
 }
 
+
+
+
+-(IBAction)WARNING{
+    UIAlertView *WARNINGalert = [[UIAlertView alloc]
+                          initWithTitle:@"WARNING"
+                          message:@" As with the instructions, half-embarrasing things MIGHT get posted.....(hint hint) USE AT YOUR OWN RISK, so I recommend that people who don't like having fun or getting slightly teased might not want to use this app. Just sayin' ya know. Good luck ;) "
+                          delegate:self
+                          cancelButtonTitle:@"I understand."
+                          otherButtonTitles:nil];
+    
+    [WARNINGalert performSelectorOnMainThread:@selector(show)
+                            withObject:nil
+                         waitUntilDone:NO];
+}
 
 
 //-(void)twoMinutesAfterZero{

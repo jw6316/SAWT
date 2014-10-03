@@ -10,13 +10,10 @@
 
 //ஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜT O  D O  L I S Tஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜ
 //-----------------------------------------------------------------------------------------------------------------
-//----------------------CLICKING ON STOP AFTER ITS BEEN CLEARED ONCE DOESNT MAKE IT DISAPPEAR----------------------
 //-----------------------------------------------BE ABLE TO PLAY MUSC----------------------------------------------
 //-----------------------------------------------------JIKKI-------------------------------------------------------
-//-------------------------------------------------配列つくりなさい---------------------------------------------------
-//---------------------------------------after being reset the timer doesnt work-----------------------------------
 //---------------------------------------make the alarm go off even on sleep mode----------------------------------
-//--------------------------------------------------instructions---------------------------------------------------
+//-----------------------------------------------warning to サラリーマン---------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
 //ஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜT O  D O  L I S Tஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜ
 
@@ -109,8 +106,8 @@
     hazukashiArray [1] = @"Im only %dcm tall";
     hazukashiArray [2] = @"My foot length is %dcm";
     hazukashiArray [3] = @"I already changed my diapers %d times today!";
-    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
-    hazukashiArray [5] = @"ffff %d";
+    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
+    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
     hazukashiArray [6] = @"gggg %d";
     hazukashiArray [7] = @"hhhh %d";
     hazukashiArray [8] = @"iiii %d";
