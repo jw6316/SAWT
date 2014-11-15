@@ -21,6 +21,8 @@
 		7D7FE73619DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7FE73519DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */; };
 		7DA5AB831954541600E10C65 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB821954541600E10C65 /* Accounts.framework */; };
 		7DA5AB851954544300E10C65 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB841954544300E10C65 /* Social.framework */; };
+		7DC627EC19E7F67C00E01079 /* grey-twitterino.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC627EB19E7F67C00E01079 /* grey-twitterino.png */; };
+		7DC627EE19E7F8D300E01079 /* twitterButtonn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DC627ED19E7F8D300E01079 /* twitterButtonn.png */; };
 		7DE2457D191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */; };
 		7DE2457F19188054005ABF02 /* 97744^ALARM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */; };
 		7DE6F1611999E34B0096865B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA5AB841954544300E10C65 /* Social.framework */; };
@@ -59,6 +61,8 @@
 		7D7FE73519DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2014-05-05 at 2.24.25 PM.png"; sourceTree = "<group>"; };
 		7DA5AB821954541600E10C65 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		7DA5AB841954544300E10C65 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7DC627EB19E7F67C00E01079 /* grey-twitterino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-twitterino.png"; sourceTree = "<group>"; };
+		7DC627ED19E7F8D300E01079 /* twitterButtonn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterButtonn.png; sourceTree = "<group>"; };
 		7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2014-05-06 at 10.55.10 AM.png"; sourceTree = "<group>"; };
 		7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "97744^ALARM.mp3"; path = "../97744^ALARM.mp3"; sourceTree = "<group>"; };
 		7DF30DAD19176A9600C05074 /* Alarm mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alarm mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,8 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				7DE2457E19188054005ABF02 /* 97744^ALARM.mp3 */,
-				7D7FE73519DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */,
 				7DE2457C191878D5005ABF02 /* Screen Shot 2014-05-06 at 10.55.10 AM.png */,
+				7D7FE73519DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png */,
+				7DC627ED19E7F8D300E01079 /* twitterButtonn.png */,
+				7DC627EB19E7F67C00E01079 /* grey-twitterino.png */,
 				7D7FE72B19DEB0FA008801A2 /* intructionsButton.png */,
 				7D7FE72D19DEB179008801A2 /* warningButton.png */,
 				7D3633FC199C8C2A00635152 /* resetButton.png */,
@@ -275,11 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3633FF199C8C2A00635152 /* resetButton.png in Resources */,
+				7DC627EC19E7F67C00E01079 /* grey-twitterino.png in Resources */,
 				7D7FE73619DEB791008801A2 /* Screen Shot 2014-05-05 at 2.24.25 PM.png in Resources */,
 				7DE2457F19188054005ABF02 /* 97744^ALARM.mp3 in Resources */,
 				7DF30DCC19176A9600C05074 /* Images.xcassets in Resources */,
 				7D7FE72C19DEB0FA008801A2 /* intructionsButton.png in Resources */,
 				7DF30DBB19176A9600C05074 /* InfoPlist.strings in Resources */,
+				7DC627EE19E7F8D300E01079 /* twitterButtonn.png in Resources */,
 				7D7FE72E19DEB179008801A2 /* warningButton.png in Resources */,
 				7D363400199C8C2A00635152 /* startButton.png in Resources */,
 				7DF30DC419176A9600C05074 /* Main.storyboard in Resources */,

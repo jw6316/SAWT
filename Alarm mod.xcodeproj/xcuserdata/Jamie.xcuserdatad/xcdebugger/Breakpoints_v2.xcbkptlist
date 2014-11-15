@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "432818656.457022"
+            timestampString = "437732128.495465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "350"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "432818903.718035"
+            timestampString = "437732128.495465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "522"
@@ -58,23 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "432818656.457022"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "-twitterino"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "432818899.93159"
+            timestampString = "437732128.495465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "420"

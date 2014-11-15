@@ -16,6 +16,9 @@
     IBOutlet UITextField *textField2;
     SLRequest *postRequest;
     int randomisation;
+    UIAlertView *twitterAlert;
+    UIAlertView *WARNINGalert;
+    UIAlertView *alertt;
     
     int a;
     int b;
@@ -57,9 +60,8 @@
 }
 
 -(IBAction)twitterino;
--(IBAction)afterAllSeconds;
 -(IBAction)instructions;
-
+-(IBAction)twitterButton;
 
 
 

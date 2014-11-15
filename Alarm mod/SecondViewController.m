@@ -12,8 +12,6 @@
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------BE ABLE TO PLAY MUSC----------------------------------------------
 //-----------------------------------------------------JIKKI-------------------------------------------------------
-//---------------------------------------make the alarm go off even on sleep mode----------------------------------
-//-----------------------------------------------warning to サラリーマン---------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
 //ஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜT O  D O  L I S Tஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜ
 
@@ -108,8 +106,8 @@
     hazukashiArray [3] = @"I already changed my diapers %d times today!";
     hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
     hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
-    hazukashiArray [6] = @"gggg %d";
-    hazukashiArray [7] = @"hhhh %d";
+    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
+    hazukashiArray [7] = @"hhhh 2%d";
     hazukashiArray [8] = @"iiii %d";
     hazukashiArray [9] = @"jjjj %d";
     //    i = 1;
@@ -334,16 +332,19 @@
 
 
 - (IBAction)twitterino{//change to void later
-//    labelForA.text = [NSString stringWithFormat:@"%d", a];
-//    labelForB.text = [NSString stringWithFormat:@"%d", b];
-//    labelForC.text = [NSString stringWithFormat:@"%d", c];
-//    labelForD.text = [NSString stringWithFormat:@"%d", d];
-//    labelForE.text = [NSString stringWithFormat:@"%d", e];
-//    labelForF.text = [NSString stringWithFormat:@"%d", f];
-//    labelForG.text = [NSString stringWithFormat:@"%d", g];
-//    labelForH.text = [NSString stringWithFormat:@"%d", h];
-//    labelForI.text = [NSString stringWithFormat:@"%d", i];
-//    labelForJ.text = [NSString stringWithFormat:@"%d", j];
+    
+    
+    
+//    hazukashiArray [0] = @"I weigh %d00 kg.";
+//    hazukashiArray [1] = @"Im only %dcm tall";
+//    hazukashiArray [2] = @"My foot length is %dcm";
+//    hazukashiArray [3] = @"I already changed my diapers %d times today!";
+//    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
+//    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
+//    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
+//    hazukashiArray [7] = @"hhhh 2%d";
+//    hazukashiArray [8] = @"iiii %d";
+//    hazukashiArray [9] = @"jjjj %d";
     
     int random_number = arc4random() %10;
     
