@@ -333,18 +333,17 @@
 
 - (IBAction)twitterino{//change to void later
     
-    //kkkk
     
-//    hazukashiArray [0] = @"I weigh %d00 kg.";
-//    hazukashiArray [1] = @"Im only %dcm tall";
-//    hazukashiArray [2] = @"My foot length is %dcm";
-//    hazukashiArray [3] = @"I already changed my diapers %d times today!";
-//    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
-//    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
-//    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
-//    hazukashiArray [7] = @"hhhh 2%d";
-//    hazukashiArray [8] = @"iiii %d";
-//    hazukashiArray [9] = @"jjjj %d";
+    //    hazukashiArray [0] = @"I weigh %d00 kg.";
+    //    hazukashiArray [1] = @"Im only %dcm tall";
+    //    hazukashiArray [2] = @"My foot length is %dcm";
+    //    hazukashiArray [3] = @"I already changed my diapers %d times today!";
+    //    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
+    //    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
+    //    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
+    //    hazukashiArray [7] = @"hhhh 2%d";
+    //    hazukashiArray [8] = @"iiii %d";
+    //    hazukashiArray [9] = @"jjjj %d";
     
     int random_number = arc4random() %10;
     
