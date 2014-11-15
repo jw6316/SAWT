@@ -332,7 +332,7 @@
 
 
 - (IBAction)twitterino{//change to void later
-    
+    //kkkkk
     
     //    hazukashiArray [0] = @"I weigh %d00 kg.";
     //    hazukashiArray [1] = @"Im only %dcm tall";
