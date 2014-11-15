@@ -49,9 +49,14 @@
 
 - (void)viewDidLoad
 {
+    a = 1;
+    b = 140;
+    c = 20;
+    d = 1;
+    e = 1;
+    f = 1;
+    g = 1;
     
-    
-    b = 160;
     [super viewDidLoad];
     
     //===========
@@ -334,16 +339,29 @@
 - (IBAction)twitterino{//change to void later
     //kk
     
-    //    hazukashiArray [0] = @"I weigh %d00 kg.";
-    //    hazukashiArray [1] = @"Im only %dcm tall";
-    //    hazukashiArray [2] = @"My foot length is %dcm";
-    //    hazukashiArray [3] = @"I already changed my diapers %d times today!";
-    //    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
-    //    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
-    //    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
-    //    hazukashiArray [7] = @"hhhh 2%d";
-    //    hazukashiArray [8] = @"iiii %d";
-    //    hazukashiArray [9] = @"jjjj %d";
+    //    hazukashiArray [a] = @"I weigh %d00 kg.";
+    //    hazukashiArray [b] = @"Im only %dcm tall";
+    //    hazukashiArray [c] = @"My foot length is %dcm";
+    //    hazukashiArray [d] = @"I already changed my diapers %d times today!";
+    //    hazukashiArray [e] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
+    //    hazukashiArray [f] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
+    //    hazukashiArray [g] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ONh!!!!!";
+    //    hazukashiArray [h] = @"hhhh 2%d";
+    //    hazukashiArray [i] = @"iiii %d";
+    //    hazukashiArray [j] = @"jjjj %d";
+    
+//    a = 1;
+//    b = 140;
+//    c = 20;
+//    d = 2;
+//    e = 1;
+//    f = 3;
+//    g = 1;
+//    h =
+//    i =
+//    j =
+    
+    
     
     int random_number = arc4random() %10;
     
@@ -353,13 +371,12 @@
         a++;
         z = a;
     }else if (random_number == 1){
-        b -= b;
+        b = b-arc4random() %20;
         z = b;
     }else if (random_number == 2){
         c--;
         z = c;
     }else if (random_number == 3){
-        d = 2;
         d++;
         z = d;
     }else if (random_number == 4){

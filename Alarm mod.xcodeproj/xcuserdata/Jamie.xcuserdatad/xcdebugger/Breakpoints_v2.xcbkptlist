@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "432818287.938149"
+            timestampString = "437744161.67285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-stopTimerTwitter"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "437732128.495465"
+            timestampString = "437744161.67285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "-twitterino"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "437732128.495465"
+            timestampString = "437744161.67285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "522"
-            endingLineNumber = "522"
+            startingLineNumber = "539"
+            endingLineNumber = "539"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm mod/SecondViewController.m"
-            timestampString = "437732128.495465"
+            timestampString = "437744161.67285"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
             landmarkName = "-allSecondsCountdown"
             landmarkType = "5">
          </BreakpointContent>
