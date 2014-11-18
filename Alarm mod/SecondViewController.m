@@ -56,6 +56,7 @@
     e = 1;
     f = 1;
     g = 1;
+    h = 7;
     
     [super viewDidLoad];
     
@@ -112,7 +113,7 @@
     hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
     hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
     hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
-    hazukashiArray [7] = @"hhhh 2%d";
+    hazukashiArray [7] = @"So, I was on facebook %d hours today.... :D what a great way to spend school time!";
     hazukashiArray [8] = @"iiii %d";
     hazukashiArray [9] = @"jjjj %d";
     //    i = 1;
@@ -361,7 +362,7 @@
 //    i =
 //    j =
     
-    
+
     
     int random_number = arc4random() %10;
     
