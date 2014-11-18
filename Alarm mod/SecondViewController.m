@@ -103,7 +103,8 @@
     // hogeメソッドを呼び出すという通知要求の登録を行っている。
     [nc addObserver:self selector:@selector(hideButtonOff) name:@"Tsuchi" object:nil];
     
-
+//hazukashiarray
+    
     
     hazukashiArray [0] = @"I weigh %d00 kg.";
     hazukashiArray [1] = @"Im only %dcm tall";
