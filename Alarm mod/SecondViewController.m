@@ -57,6 +57,9 @@
     f = 1;
     g = 1;
     h = 7;
+    // i =
+    // j =
+    
     
     [super viewDidLoad];
     
