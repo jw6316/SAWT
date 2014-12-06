@@ -472,7 +472,7 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
             minutes = 59;
         }
         
-        
+        //k
     
     
 
