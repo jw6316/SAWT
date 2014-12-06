@@ -50,51 +50,61 @@ SecondViewController *secondViewController;
     
     afterTimerSeconds = 120;
     
-    
 }
 
--(void)twitterLink{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com"]];
-}
+
 
 
 -(IBAction)twitterButton{
     twitterAlert = [[UIAlertView alloc]
-                          initWithTitle:@"Twitter"
-                          message:@"Go to the Twitter website?"
-                          delegate:self
-                          cancelButtonTitle:@"Yes."
-                          otherButtonTitles:@"No thanks.",nil];
+                    initWithTitle:@"Twitter"
+                    message:@"Go to Twitter?"
+                    delegate:self
+                    cancelButtonTitle:@"Yes."
+                    otherButtonTitles:@"No thanks.",nil];
     
     [twitterAlert performSelectorOnMainThread:@selector(show)
-                            withObject:nil
-                         waitUntilDone:NO];
+                                   withObject:nil
+                                waitUntilDone:NO];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-
+    
     if(twitterAlert == alertView){
+        
+        NSString *url;
+        NSURL *twitterUrl;
         switch (buttonIndex) {
             case 0:
-                [self twitterLink];
+                url = @"twitter://";
+                // for testing purposes use               url = @"cp-twitter://";
+                twitterUrl = [NSURL URLWithString:url];
+                if ([[UIApplication sharedApplication] canOpenURL:twitterUrl]) {
+                    [[UIApplication sharedApplication] openURL:twitterUrl];
+                    NSLog(@"is this coming through");
+                }else {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.twitter.com"]];
+                }
                 break;
             case 1:
+                break;
+            default:
                 break;
         }
     } else if(WARNINGalert == alertView){
         switch (buttonIndex) {
             case 0:
                 break;
-
+                
         }
     }
     else if(alertt== alertView){
         switch (buttonIndex) {
             case 0:
                 break;
-//            case 1:
-//                break;
+                //            case 1:
+                //                break;
         }
     }
 }
@@ -216,15 +226,15 @@ SecondViewController *secondViewController;
 
 -(IBAction)instructions{
     alertt = [[UIAlertView alloc]
-             initWithTitle:@"Instructions"
-             message:@"1). Sign into twitter through system preferences. 2). After adding the amount of time you wish to sleep, press start. 3). This will wake you up, trying every way possible (even using auto-sharing on twitter; don't worry we'll only post sort-of-embarrasing things, nothing serious)."
-             delegate:self
-             cancelButtonTitle:@"Got it."
-             otherButtonTitles:nil];
+              initWithTitle:@"Instructions"
+              message:@"1). Sign into twitter through system preferences. 2). After adding the amount of time you wish to sleep, press start. 3). This will wake you up, trying every way possible (even using auto-sharing on twitter; don't worry we'll only post sort-of-embarrasing things, nothing serious)."
+              delegate:self
+              cancelButtonTitle:@"Got it."
+              otherButtonTitles:nil];
     
     [alertt performSelectorOnMainThread:@selector(show)
-                            withObject:nil
-                         waitUntilDone:NO];
+                             withObject:nil
+                          waitUntilDone:NO];
     NSLog(@"this is working");
 }
 
@@ -233,15 +243,15 @@ SecondViewController *secondViewController;
 
 -(IBAction)WARNING{
     WARNINGalert = [[UIAlertView alloc]
-                          initWithTitle:@"WARNING"
-                          message:@" As with the instructions, half-embarrasing things MIGHT get posted.....(hint hint) USE AT YOUR OWN RISK, so I recommend that people who don't like having fun or getting slightly teased might not want to use this app. Just sayin' ya know. Good luck ;) "
-                          delegate:self
-                          cancelButtonTitle:@"I understand."
-                          otherButtonTitles:nil];
+                    initWithTitle:@"WARNING"
+                    message:@" As with the instructions, half-embarrasing things MIGHT get posted.....(hint hint) USE AT YOUR OWN RISK, so I recommend that people who don't like having fun or getting slightly teased might not want to use this app. Just sayin' ya know. Good luck ;) "
+                    delegate:self
+                    cancelButtonTitle:@"I understand."
+                    otherButtonTitles:nil];
     
     [WARNINGalert performSelectorOnMainThread:@selector(show)
-                            withObject:nil
-                         waitUntilDone:NO];
+                                   withObject:nil
+                                waitUntilDone:NO];
 }
 
 
@@ -257,9 +267,9 @@ SecondViewController *secondViewController;
 //    labelForH.text = [NSString stringWithFormat:@"%d", h];
 //    labelForI.text = [NSString stringWithFormat:@"%d", i];
 //    labelForJ.text = [NSString stringWithFormat:@"%d", j];
-//    
+//
 //    int random_number = arc4random() %10;
-//    
+//
 //    if (random_number == 0){
 //        a++;
 //        z = a;
@@ -306,7 +316,7 @@ SecondViewController *secondViewController;
 //                     NSString *str = [NSString stringWithFormat:hazukashiArray[random_number],z];
 //                     NSString * randStr = [NSString stringWithFormat:str,random_number];
 //                     NSDictionary *params = [NSDictionary dictionaryWithObject:randStr forKey:@"status"];//
-//                     
+//
 //                     SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
 //                                                             requestMethod:SLRequestMethodPOST
 //                                                                       URL:url
@@ -369,7 +379,7 @@ SecondViewController *secondViewController;
 //---------------------------------------------------------------------------------------------------------------------------------
 //----------------------------------|--|-----------------------------------------------|---|---------------------------------------
 //---------------------------------|-----|-------------------------------------------|-------|-------------------------------------
-//------------------------------------0--------------------------------------------------o-----------------------------------------
+//------------------------------------0--------------------------------------------------0-----------------------------------------
 //---------------------------------|-----|--------------------------------------------|------|-------------------------------------
 //-----------------------------------|-|------------------------------------------------|--|---------------------------------------
 //-----------------------------------------------------------|---------------------------------------------------------------------

@@ -251,6 +251,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jamie Walker";
 				TargetAttributes = {
+					7DF30DAC19176A9600C05074 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 0;
+							};
+						};
+					};
 					7DF30DD019176A9600C05074 = {
 						TestTargetID = 7DF30DAC19176A9600C05074;
 					};

@@ -122,8 +122,6 @@ float difference; // the difference between backgroundTime and foregroundTime
 -(IBAction)minutesstepper; //the stepper button changing the vlue of "minutes"
 -(IBAction)twitterino;
 -(void)hideButtonOff; //hides the buttonOff button.
--(void)afterTimerVoid; //setting for twitter autoshare
-
 //-(void)alert;
 
 

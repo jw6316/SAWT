@@ -12,6 +12,7 @@
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------BE ABLE TO PLAY MUSC----------------------------------------------
 //-----------------------------------------------------JIKKI-------------------------------------------------------
+//---------------------------------------WHEN HOME BUTTON ALL BUTTONS SHOW-----------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
 //ஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜT O  D O  L I S Tஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜஜ
 
@@ -49,7 +50,7 @@
 
 - (void)viewDidLoad
 {
-    a = 1;
+    a = 130;
     b = 140;
     c = 20;
     d = 1;
@@ -102,14 +103,14 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
     // 通知センターに通知要求を登録する
-    // この例だと、通知センターに"Tszuchi"という名前の通知がされた時に、
+    // この例だと、通知センターに"Tsuchi"という名前の通知がされた時に、
     // hogeメソッドを呼び出すという通知要求の登録を行っている。
     [nc addObserver:self selector:@selector(hideButtonOff) name:@"Tsuchi" object:nil];
     
 //hazukashiarray
     
     
-    hazukashiArray [0] = @"I weigh %d00 kg.";
+    hazukashiArray [0] = @"I weigh %d kg.";
     hazukashiArray [1] = @"Im only %dcm tall";
     hazukashiArray [2] = @"My foot length is %dcm";
     hazukashiArray [3] = @"I already changed my diapers %d times today!";
@@ -203,7 +204,7 @@
 -(void)startTimer{
     if (timer == nil){
         
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.05    // used for debug, fix to 1 time per sec later.
+        timer = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 1 time per sec later.
                                                  target:self
                                                selector:@selector(countdown)
                                                userInfo:nil
@@ -343,25 +344,25 @@
 - (IBAction)twitterino{//change to void later
     //kk
     
-    //    hazukashiArray [a] = @"I weigh %d00 kg.";
-    //    hazukashiArray [b] = @"Im only %dcm tall";
-    //    hazukashiArray [c] = @"My foot length is %dcm";
-    //    hazukashiArray [d] = @"I already changed my diapers %d times today!";
-    //    hazukashiArray [e] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
-    //    hazukashiArray [f] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
-    //    hazukashiArray [g] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ONh!!!!!";
-    //    hazukashiArray [h] = @"hhhh 2%d";
-    //    hazukashiArray [i] = @"iiii %d";
-    //    hazukashiArray [j] = @"jjjj %d";
-    
-//    a = 1;
-//    b = 140;
+//    hazukashiArray [0] = @"I weigh %d kg.";
+//    hazukashiArray [1] = @"Im only %dcm tall";
+//    hazukashiArray [2] = @"My foot length is %dcm";
+//    hazukashiArray [3] = @"I already changed my diapers %d times today!";
+//    hazukashiArray [4] = @"I listened to %d different Justin Bieber albums this week already!! <3 <3 <3 <3 <3 <3 <3 <3 ";
+//    hazukashiArray [5] = @"I slipped an hit my bum %d times today.. :( I think I gotta have my mommy check it for me again....";
+//    hazukashiArray [6] = @"I'called my mommy %d times today to record the spongebob episode, but she STILL hasnt recorded it!!!!!!!! COME ON!!!!!!";
+//    hazukashiArray [7] = @"So, I was on facebook %d hours today.... :D what a great way to spend school time!";
+//    hazukashiArray [8] = @"iiii %d";
+//    hazukashiArray [9] = @"jjjj %d";
+//    
+//    a = 130;
+//    b = 150;
 //    c = 20;
-//    d = 2;
+//    d = 1;
 //    e = 1;
-//    f = 3;
+//    f = 1;
 //    g = 1;
-//    h =
+//    h = 4;
 //    i =
 //    j =
     
@@ -372,7 +373,7 @@
     NSLog(@"random_number == %d", random_number);
     
     if (random_number == 0){
-        a++;
+        a = a + 15;
         z = a;
     }else if (random_number == 1){
         b = b-arc4random() %20;
@@ -395,13 +396,14 @@
     }else if (random_number == 7){
         h++;
         z = h;
-    }else if (random_number == 8){
-        i++;
-        z = i;
-    }else if (random_number == 9){
-        j++;
-        z = j;
     }
+//     else if (random_number == 8){
+//        i++;
+//        z = i;
+//    }else if (random_number == 9){
+//        j++;
+//        z = j;
+//    }
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         ACAccountStore *accountStore = [[ACAccountStore alloc] init];
         ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
@@ -450,7 +452,7 @@
 
     if (timer2==nil){
     
-timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1    // used for debug, fix to 1 time per sec later.
+timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 1 time per sec later.
                                           target:self
                                         selector:@selector(allSecondsCountdown)
                                         userInfo:nil
@@ -542,6 +544,8 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1    // used for debug, fix t
             break;
             
         default:
+        case 1:
+            [self twitterino];
             
             break;
     }
@@ -629,6 +633,7 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:0.1    // used for debug, fix t
 }
 
 -(IBAction)off{
+    [self stopTimerTwitter];
     
     if (stopnumber == 0) {
         stopnumber = 1;
