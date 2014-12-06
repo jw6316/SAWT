@@ -475,7 +475,7 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
     
     
     
-
+//l
     
     if (hours == 0 && minutes == 0 && secondsTwo == 1){
         
