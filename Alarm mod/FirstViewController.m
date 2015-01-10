@@ -227,7 +227,7 @@ SecondViewController *secondViewController;
 -(IBAction)instructions{
     alertt = [[UIAlertView alloc]
               initWithTitle:@"Instructions"
-              message:@"1). Sign into twitter through system preferences. 2). After adding the amount of time you wish to sleep, press start. 3). This will wake you up, trying every way possible (even using auto-sharing on twitter; don't worry we'll only post sort-of-embarrasing things, nothing serious)."
+              message:@"1). Add the amount of time you wish to sleep, and press start. 2). This will wake you up, trying every way possible (even using auto-sharing on twitter; don't worry we'll only post sort-of-embarrasing things, nothing serious)."
               delegate:self
               cancelButtonTitle:@"Got it."
               otherButtonTitles:nil];

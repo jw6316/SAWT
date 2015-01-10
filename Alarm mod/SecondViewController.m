@@ -157,6 +157,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self hideButtonOff];
+    if (hours < 0) {
+        [self twitterino];
+    }
     
 
 }

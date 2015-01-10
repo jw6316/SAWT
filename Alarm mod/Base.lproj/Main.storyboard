@@ -118,7 +118,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.66188177917104218" green="0.87374441964285721" blue="0.35505963217943409" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="TN0-le-Nkl"/>
+                    <tabBarItem key="tabBarItem" title="Introduction" image="first" id="TN0-le-Nkl"/>
                     <connections>
                         <outlet property="labelForA" destination="i09-l9-Pss" id="KF3-yJ-MRH"/>
                         <outlet property="labelForB" destination="foE-4p-n1N" id="U9a-kb-q2t"/>
@@ -274,7 +274,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.67947955510000002" green="0.90187669839999995" blue="0.3585009468" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="90l-ra-bN9"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="second" id="90l-ra-bN9"/>
                     <connections>
                         <outlet property="bgImageView" destination="O7P-7L-qXv" id="wZ0-KX-jb2"/>
                         <outlet property="buttonoff" destination="CGa-i4-Q9h" id="JiQ-Gz-IkS"/>
@@ -314,6 +314,7 @@
     </scenes>
     <resources>
         <image name="Screen Shot 2014-05-06 at 10.55.10 AM.png" width="866" height="960"/>
+        <image name="first" width="30" height="30"/>
         <image name="grey-twitterino.png" width="314" height="257"/>
         <image name="intructionsButton.png" width="2134" height="570"/>
         <image name="resetButton.png" width="300" height="80"/>
