@@ -152,6 +152,8 @@
 {
     buttonoff.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
 //    [self.view setNeedsDisplay];
+    
+    NSLog(@"WORKING %@",NSStringFromCGRect(buttonoff.frame));
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -163,7 +165,8 @@
     
 
 }
-//kkkkkkkkk
+
+//△
 
 - (void)didReceiveMemoryWarning
 {
@@ -277,7 +280,8 @@
         
         //通知メッセージの本文を指定します。
         localNotif.alertBody = [NSString stringWithFormat:@"The timer has gone off. If you do not wake up, bad things might happen to you. No seriously."];
-        
+        //▲
+
         //通知メッセージアラートのボタンに表示される文字を指定します。
         localNotif.alertAction = @"Open";
         
@@ -642,7 +646,6 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
         stopnumber = 1;
         [audio stop];
         [self hideButtonOff];
-        startButton.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
         
 
         
