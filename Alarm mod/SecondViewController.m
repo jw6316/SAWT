@@ -62,6 +62,8 @@
     // j =
     
     
+    
+    
     [super viewDidLoad];
     
     //===========
@@ -72,6 +74,8 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"97744^ALARM" ofType:@"mp3"];
     url = [NSURL fileURLWithPath:path];
     audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    
+
     
     [audio prepareToPlay];
     
@@ -126,6 +130,7 @@
     
     
     
+
 }
 
 -(void)stopTimerTwitter{
@@ -150,20 +155,58 @@
 
 - (void)hideButtonOff
 {
-    buttonoff.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
+//    buttonoff.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
 //    [self.view setNeedsDisplay];
+  
+    NSLog(@"%d", allSeconds);
+
+    buttonoff.hidden = YES;
     
+    if ([timer isValid]){
+        startButton.hidden = YES;
+        NSLog(@"hiddenYES%d", allSeconds);
+
+    } else{
+        startButton.hidden = NO;
+        NSLog(@"hiddenNO%d", allSeconds);
+
+    }
     NSLog(@"WORKING %@",NSStringFromCGRect(buttonoff.frame));
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+//    [self hideButtonOff];
+//    if (hours < 0) {
+//        [self twitterino];
+//    }
+//    
+
+    allSeconds = secondsTwo + minutes * 60 + hours * 3600;
+    
+    
     [self hideButtonOff];
     if (hours < 0) {
         [self twitterino];
     }
     
+    if (hoursTF < 0) {
+        [self resetion];
+    }
+        
+        NSLog(@"workingworkingworkingworking");
 
+    }
+//    NSLog(@"label=%@", hourslabel.text);
+//    
+//    NSLog(@"%d", [hourslabel.text intValue]);
+//    if ([hourslabel.text intValue] < 0) {
+//    }
+//    
+
+-(void)viewWillAppear:(BOOL)animated{
+
+    
 }
 
 //△
@@ -243,8 +286,10 @@
     
     if (startnumber == 0) {
         
-        startButton.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
+//        startButton.frame = CGRectMake(-100, -100, buttonoff.frame.size.width, buttonoff.frame.size.height);
 
+        startButton.hidden = YES;
+        
         [self startTimer];
         
 
@@ -487,6 +532,14 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
     if (hours == 0 && minutes == 0 && secondsTwo == 1){
         
         
+        buttonoff.hidden = NO;
+        startButton.hidden = NO;
+        buttonoff.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
+        startButton.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
+        
+        
+        
+        
         [self afterTimerTimerMethod];
         
 
@@ -539,6 +592,25 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
     secondslabel.text = [NSString stringWithFormat:@"%d", secondsTwo];
     minuteslabel.text = [NSString stringWithFormat:@"%d", minutes];
     hourslabel.text = [NSString stringWithFormat:@"%d", hours];
+    
+    if ([hourslabel.text intValue] < 0) {
+        [self resetion];
+
+    }
+//    
+//    if (hours < 0) {
+//        [self resetion];
+//        
+//    }
+//    if ([hoursTF.text intValue] < 0) {
+//        [self resetion];
+//        
+//    }
+    
+    
+    
+
+    
 }
 
 
@@ -578,6 +650,14 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
     
     [alert show];
     
+    
+    buttonoff.hidden = NO;
+    startButton.hidden = NO;
+    buttonoff.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
+    startButton.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
+    
+    
+    
     // アラートビューを表示
     NSLog(@"im totally awesomely working");
     buttonoff.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
@@ -603,6 +683,12 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
         [timer invalidate];
         [timer2 invalidate];
         timer = nil;
+        
+        allSeconds = 0;
+        
+        startButton.hidden = NO;
+        startButton.frame = CGRectMake(77, 253, buttonoff.frame.size.width, buttonoff.frame.size.height);
+
         
         
     }
@@ -647,7 +733,8 @@ timer2 = [NSTimer scheduledTimerWithTimeInterval:1    // used for debug, fix to 
         [audio stop];
         [self hideButtonOff];
         
-
+        
+    
         
         
 
